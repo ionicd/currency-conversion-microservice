@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class CurrencyConversionController{
 	
-    @GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}") //where {from} and {to} represents the column   
+    @GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}") //where {from} and {to} represents the column   
     public CurrencyConversionBean CurrencyConversionBeanconvertCurrency(@PathVariable String from,
     		@PathVariable String to, @PathVariable BigDecimal quantity) {
         //setting variables to currency exchange service  
